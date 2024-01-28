@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 #include "keys_de.h"
 #include <dt-bindings/zmk/ext_power.h>
-#include "../zmk-nodefree-config/helper.h"
+//#include "../zmk-nodefree-config/helper.h"
 
 
 
@@ -36,46 +36,174 @@
               ╰────────╯ ╰────────╯            */
 
 
-ZMK_COMBO(pwr,  &kp C_POWER, 0 4, ALL)
-ZMK_COMBO(f23,  &kp F23, 10 20, ALL)
-ZMK_COMBO(f24,  &kp F24, 19 29, ALL)
-
-ZMK_COMBO(quote,&kp DE_DQT, 8 18, BASE)
-ZMK_COMBO(apostroph,  &kp DE_APOS, 0 10, BASE)
-
-
-ZMK_COMBO(quoteus,&kp DQT, 8 18, BASEUS)
-ZMK_COMBO(apostrophus,  &kp APOS, 0 10, BASEUS)
-
-ZMK_COMBO(five,  &kp N5, 3 13, ALL)
-ZMK_COMBO(six,  &kp N6, 6 16, ALL)
+//ZMK_COMBO(pwr,  &kp C_POWER, 0 4, ALL)
+combos {
+    compatible = "zmk,combos";
+    combo_pwr {
+        timeout-ms = <50>;
+        key-positions = <0 4>;
+        bindings = <&kp C_POWER>;
+        layers = <ALL>;
+    };
+};
 
 
+//ZMK_COMBO(quote,&kp DE_DQT, 8 18, BASE)
+combos {
+    compatible = "zmk,combos";
+    combo_quote {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <8 18>;
+        bindings = <&kp DE_DQT>;
+        layers = <BASE>;
+    };
+};
 
-ZMK_COMBO(up,  &kp UP, 11 12 13, ALL,15)
-ZMK_COMBO(down,  &kp DOWN, 11 13, ALL,15)
-ZMK_COMBO(right,  &kp RIGHT, 12 13, ALL,15)
-ZMK_COMBO(left,  &kp LEFT, 11 12, ALL,15)
+//ZMK_COMBO(apostroph,  &kp DE_APOS, 0 10, BASE)
+combos {
+    compatible = "zmk,combos";
+    combo_apostroph {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <0 10>;
+        bindings = <&kp DE_APOS>;
+        layers = <BASE>;
+    };
+};
+
+//ZMK_COMBO(quoteus,&kp DQT, 8 18, BASEUS)
+combos {
+    compatible = "zmk,combos";
+    combo_quoteus {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <8 18>;
+        bindings = <&kp DQT>;
+        layers = <BASEUS>;
+    };
+};
+
+//ZMK_COMBO(apostrophus,  &kp APOS, 0 10, BASEUS)
+combos {
+    compatible = "zmk,combos";
+    combo_apostrophus {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <0 10>;
+        bindings = <&kp APOS>;
+        layers = <BASEUS>;
+    };
+};
+
+//ZMK_COMBO(five,  &kp N5, 3 13, ALL)
+combos {
+    compatible = "zmk,combos";
+    combo_five {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <3 13>;
+        bindings = <&kp N5>;
+        layers = <ALL>;
+    };
+};
+
+//ZMK_COMBO(six,  &kp N6, 6 16, ALL)
+combos {
+    compatible = "zmk,combos";
+    combo_six {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <6 16>;
+        bindings = <&kp N6>;
+        layers = <ALL>;
+    };
+};
 
 
-ZMK_COMBO(scCombo,  &scModMorph, 12 22, BASE BASEUS)
-ZMK_COMBO(ecommaCombo,  &ecomma, 17 27, BASE BASEUS)
+
+//ZMK_COMBO(up,  &kp UP, 11 12 13, ALL,15)
+combos {
+    compatible = "zmk,combos";
+    combo_up {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <11 12 13>;
+        bindings = <&kp UP>;
+        layers = <ALL 15>;
+    };
+};
+
+//ZMK_COMBO(down,  &kp DOWN, 11 13, ALL,15)
+combos {
+    compatible = "zmk,combos";
+    combo_down {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <11 13>;
+        bindings = <&kp DOWN>;
+        layers = <ALL 15>;
+    };
+};
+
+//ZMK_COMBO(right,  &kp RIGHT, 12 13, ALL,15)
+combos {
+    compatible = "zmk,combos";
+    combo_right {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <12 13>;
+        bindings = <&kp RIGHT>;
+        layers = <ALL 15>;
+    };
+};
+
+//ZMK_COMBO(left,  &kp LEFT, 11 12, ALL,15)
+combos {
+    compatible = "zmk,combos";
+    combo_left {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <11 12>;
+        bindings = <&kp LEFT>;
+        layers = <ALL 15>;
+    };
+};
+
+
+
+//ZMK_COMBO(scCombo,  &scModMorph, 12 22, BASE BASEUS)
+combos {
+    compatible = "zmk,combos";
+    combo_scCombo {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <12 22>;
+        bindings = <&scModMorph>;
+        layers = <BASE BASEUS>;
+    };
+};
+
+//ZMK_COMBO(ecommaCombo,  &ecomma, 17 27, BASE BASEUS)
+combos {
+    compatible = "zmk,combos";
+    combo_ecommaCombo {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <17 27>;
+        bindings = <&ecomma>;
+        layers = <BASE BASEUS>;
+    };
+};
+
 
 //home row mods
-ZMK_BEHAVIOR(hm, hold_tap,
+
+hm: home_row_mod {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
     flavor = "tap-preferred";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <125>;
+     tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
     global-quick-tap;
+    require-prior-idle-ms = <125>;
     bindings = <&kp>, <&kp>;
-)
-ZMK_BEHAVIOR(hmhold, hold_tap,
+};
+hmhold: home_row_mod_hold {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
     flavor = "hold-preferred";
-    tapping-term-ms = <280>;
-    quick-tap-ms = <125>;
-    global-quick-tap;
-    bindings = <&mo>, <&kp>;
-)
+    bindings = <&kp>, <&kp>;
+};
+
 
 
 //macros
@@ -85,49 +213,91 @@ ZMK_BEHAVIOR(ecomma, macro,
     wait-ms = <0>;
     tap-ms = <0>;
     bindings = <&kp E &kp COMMA>;)
-ZMK_BEHAVIOR(sc, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp S &kp C>;)
-ZMK_BEHAVIOR(capitalSlowC, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp LS(S) &kp C >;)
-
-ZMK_BEHAVIOR(bracket, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp DE_LEFT_BRACKET &kp DE_RIGHT_BRACKET &kp LEFT >;)
-ZMK_BEHAVIOR(brace, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp DE_LEFT_BRACE &kp DE_RIGHT_BRACE &kp LEFT >;)
-ZMK_BEHAVIOR(paren, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp DE_LEFT_PARENTHESIS &kp DE_RIGHT_PARENTHESIS &kp LEFT >;)
-ZMK_BEHAVIOR(lessgreater, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp DE_LESS_THAN &kp DE_GREATER_THAN &kp LEFT >;)
+    
 
 
-ZMK_BEHAVIOR(bracketus, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT >;)
-ZMK_BEHAVIOR(braceus, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT >;)
-ZMK_BEHAVIOR(parenus, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT >;)
-ZMK_BEHAVIOR(lessgreaterus, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp LT &kp GT &kp LEFT >;)
+macros {
+        ecomma: ecomma {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_tap &kp E &kp COMMA>
+            ;
+    };
+    sc: sc {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_tap &kp S &kp C>
+            ;
+    };
+    capitalSlowC: capitalSlowC {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp LS(S) &kp C>
+        ;
+    };
+    bracket: bracket {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp DE_LEFT_BRACKET &kp DE_RIGHT_BRACKET &kp LEFT>
+        ;
+    };
+    brace: brace {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp DE_LEFT_BRACE &kp DE_RIGHT_BRACE &kp LEFT>
+        ;
+    };
+    paren: paren {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp DE_LEFT_PARENTHESIS &kp DE_RIGHT_PARENTHESIS &kp LEFT>
+        ;
+    };
+    lessgreater: lessgreater {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp DE_LESS_THAN &kp DE_GREATER_THAN &kp LEFT>
+        ;
+    };
+    bracketus: bracketus {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT>
+        ;
+    };
+    braceus: braceus {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>
+        ;
+    };
+    parenus: parenus {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT>
+        ;
+    };
+    lessgreaterus: lessgreaterus {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp LT &kp GT &kp LEFT>
+        ;
+    };
+
+
+
+};
 
 
 
@@ -135,20 +305,29 @@ ZMK_BEHAVIOR(lessgreaterus, macro,
 
 
 //mod morph
-ZMK_BEHAVIOR(scModMorph, mod_morph,
-    bindings = <&sc>, <&capitalSlowC>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-)
 
-ZMK_BEHAVIOR(germanStyeDot, mod_morph,
+
+scModMorph: scModMorph{
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&sc>, <&capitalSlowC>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+germanStyleDot: germanStyleDot {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
     bindings = <&kp DOT>, <&kp COLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+};
 
-ZMK_BEHAVIOR(germanStyeComma, mod_morph,
+
+
+germanStyeComma: germanStyeComma {
+    compatible = "zmk,behavior-mod-morph";
+    #binding-cells = <0>;
     bindings = <&kp DOT>, <&kp SEMICOLON>;
     mods = <(MOD_LSFT|MOD_RSFT)>;
-)
+};
 
 / {
 
