@@ -27,24 +27,7 @@
 #define ADJ 6
 #define ALL -1
 
-//home row mods
 
-hm: hm {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-     tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    global-quick-tap;
-    require-prior-idle-ms = <125>;
-    bindings = <&kp>, <&kp>;
-};
-hmhold: hmhold {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "hold-preferred";
-    bindings = <&kp>, <&kp>;
-};
 
 / {
         /*                KEY POSITIONS
@@ -153,12 +136,12 @@ combos {
 //macros
 
 macros {
-        ecomma: ecomma {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-            = <&macro_tap &kp E &kp COMMA>
-            ;
+    ecomma: ecomma {
+    compatible = "zmk,behavior-macro";
+    #binding-cells = <0>;
+    bindings
+        = <&macro_tap &kp E &kp COMMA>
+        ;
     };
     sc: sc {
         compatible = "zmk,behavior-macro";
@@ -243,6 +226,26 @@ macros {
 //mod morph
 
     behaviors {
+        //home row mods
+
+        hm: hm {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
+            global-quick-tap;
+            require-prior-idle-ms = <125>;
+            bindings = <&kp>, <&kp>;
+        };
+        hmhold: hmhold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            bindings = <&kp>, <&kp>;
+        };
+        
+        //mod morph
         scModMorph: scModMorph{
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
