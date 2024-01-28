@@ -45,7 +45,7 @@
             timeout-ms = <50>;
             key-positions = <0 4>;
             bindings = <&kp C_POWER>;
-            layers = <-1>;
+            //layers = <-1>;
         };
             combo_quote {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
