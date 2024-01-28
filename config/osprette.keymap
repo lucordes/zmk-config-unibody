@@ -25,6 +25,7 @@
 #define SYMUS 4
 #define NUMPAD 5
 #define ADJ 6
+#define ALL -1
 
 
 
@@ -37,6 +38,24 @@
   ╰───────────╮ 30  31 │ │ 32  33 ╭───────────╯
               ╰────────╯ ╰────────╯            */
 
+//home row mods
+
+hm: home_row_mod {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "tap-preferred";
+     tapping-term-ms = <200>;
+    quick-tap-ms = <200>;
+    global-quick-tap;
+    require-prior-idle-ms = <125>;
+    bindings = <&kp>, <&kp>;
+};
+hmhold: home_row_mod_hold {
+    compatible = "zmk,behavior-hold-tap";
+    #binding-cells = <2>;
+    flavor = "hold-preferred";
+    bindings = <&kp>, <&kp>;
+};
 
 //ZMK_COMBO(pwr,  &kp C_POWER, 0 4, ALL)
 combos {
@@ -130,24 +149,6 @@ combos {
 
 
 
-//home row mods
-
-hm: home_row_mod {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "tap-preferred";
-     tapping-term-ms = <200>;
-    quick-tap-ms = <200>;
-    global-quick-tap;
-    require-prior-idle-ms = <125>;
-    bindings = <&kp>, <&kp>;
-};
-hmhold: home_row_mod_hold {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <2>;
-    flavor = "hold-preferred";
-    bindings = <&kp>, <&kp>;
-};
 
 
 
