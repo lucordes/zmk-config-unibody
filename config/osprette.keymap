@@ -25,7 +25,6 @@
 #define SYMUS 4
 #define NUMPAD 5
 #define ADJ 6
-#define ALL -1
 
 
 
@@ -45,7 +44,6 @@
             timeout-ms = <50>;
             key-positions = <0 4>;
             bindings = <&kp C_POWER>;
-            //layers = <-1>;
         };
             combo_quote {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
@@ -76,37 +74,31 @@
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <3 13>;
             bindings = <&kp N5>;
-            layers = <ALL>;
         };
             combo_six {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <6 16>;
             bindings = <&kp N6>;
-            layers = <ALL>;
         };
             combo_up {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <11 12 13>;
             bindings = <&kp UP>;
-            layers = <ALL 15>;
         };
             combo_down {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <11 13>;
             bindings = <&kp DOWN>;
-            layers = <ALL 15>;
         };
             combo_right {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <12 13>;
             bindings = <&kp RIGHT>;
-            layers = <ALL 15>;
         };
             combo_left {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <11 12>;
             bindings = <&kp LEFT>;
-            layers = <ALL 15>;
         };
             combo_scCombo {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
