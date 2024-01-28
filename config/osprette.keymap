@@ -27,6 +27,8 @@
 #define ADJ 6
 
 
+
+/ {
         /*                KEY POSITIONS
   ╭────────────────────╮ ╭────────────────────╮
   │  0   1   2   3   4 │ │  5   6   7   8   9 │
@@ -45,144 +47,87 @@ combos {
         bindings = <&kp C_POWER>;
         layers = <ALL>;
     };
-};
-
-
-//ZMK_COMBO(quote,&kp DE_DQT, 8 18, BASE)
-combos {
-    compatible = "zmk,combos";
-    combo_quote {
+        combo_quote {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <8 18>;
         bindings = <&kp DE_DQT>;
         layers = <BASE>;
     };
-};
-
-//ZMK_COMBO(apostroph,  &kp DE_APOS, 0 10, BASE)
-combos {
-    compatible = "zmk,combos";
-    combo_apostroph {
+        combo_apostroph {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <0 10>;
         bindings = <&kp DE_APOS>;
         layers = <BASE>;
     };
-};
-
-//ZMK_COMBO(quoteus,&kp DQT, 8 18, BASEUS)
-combos {
-    compatible = "zmk,combos";
-    combo_quoteus {
+        combo_apostroph {
+        timeout-ms = <50>;  // You may adjust this value based on your requirements
+        key-positions = <0 10>;
+        bindings = <&kp DE_APOS>;
+        layers = <BASE>;
+    };
+        combo_quoteus {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <8 18>;
         bindings = <&kp DQT>;
         layers = <BASEUS>;
     };
-};
-
-//ZMK_COMBO(apostrophus,  &kp APOS, 0 10, BASEUS)
-combos {
-    compatible = "zmk,combos";
-    combo_apostrophus {
+        combo_apostrophus {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <0 10>;
         bindings = <&kp APOS>;
         layers = <BASEUS>;
     };
-};
-
-//ZMK_COMBO(five,  &kp N5, 3 13, ALL)
-combos {
-    compatible = "zmk,combos";
-    combo_five {
+        combo_five {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <3 13>;
         bindings = <&kp N5>;
         layers = <ALL>;
     };
-};
-
-//ZMK_COMBO(six,  &kp N6, 6 16, ALL)
-combos {
-    compatible = "zmk,combos";
-    combo_six {
+        combo_six {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <6 16>;
         bindings = <&kp N6>;
         layers = <ALL>;
     };
-};
-
-
-
-//ZMK_COMBO(up,  &kp UP, 11 12 13, ALL,15)
-combos {
-    compatible = "zmk,combos";
-    combo_up {
+        combo_up {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <11 12 13>;
         bindings = <&kp UP>;
         layers = <ALL 15>;
     };
-};
-
-//ZMK_COMBO(down,  &kp DOWN, 11 13, ALL,15)
-combos {
-    compatible = "zmk,combos";
-    combo_down {
+        combo_down {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <11 13>;
         bindings = <&kp DOWN>;
         layers = <ALL 15>;
     };
-};
-
-//ZMK_COMBO(right,  &kp RIGHT, 12 13, ALL,15)
-combos {
-    compatible = "zmk,combos";
-    combo_right {
+        combo_right {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <12 13>;
         bindings = <&kp RIGHT>;
         layers = <ALL 15>;
     };
-};
-
-//ZMK_COMBO(left,  &kp LEFT, 11 12, ALL,15)
-combos {
-    compatible = "zmk,combos";
-    combo_left {
+        combo_left {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <11 12>;
         bindings = <&kp LEFT>;
         layers = <ALL 15>;
     };
-};
-
-
-
-//ZMK_COMBO(scCombo,  &scModMorph, 12 22, BASE BASEUS)
-combos {
-    compatible = "zmk,combos";
-    combo_scCombo {
+        combo_scCombo {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <12 22>;
         bindings = <&scModMorph>;
         layers = <BASE BASEUS>;
     };
-};
-
-//ZMK_COMBO(ecommaCombo,  &ecomma, 17 27, BASE BASEUS)
-combos {
-    compatible = "zmk,combos";
-    combo_ecommaCombo {
+        combo_ecommaCombo {
         timeout-ms = <50>;  // You may adjust this value based on your requirements
         key-positions = <17 27>;
         bindings = <&ecomma>;
         layers = <BASE BASEUS>;
     };
 };
+
+
 
 
 //home row mods
@@ -207,14 +152,6 @@ hmhold: home_row_mod_hold {
 
 
 //macros
-
-    
-ZMK_BEHAVIOR(ecomma, macro,
-    wait-ms = <0>;
-    tap-ms = <0>;
-    bindings = <&kp E &kp COMMA>;)
-    
-
 
 macros {
         ecomma: ecomma {
@@ -306,30 +243,31 @@ macros {
 
 //mod morph
 
-
-scModMorph: scModMorph{
+    behaviors {
+        scModMorph: scModMorph{
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&sc>, <&capitalSlowC>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
-germanStyleDot: germanStyleDot {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp DOT>, <&kp COLON>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
+        germanStyleDot: germanStyleDot {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp COLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        germanStyeComma: germanStyeComma {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp DOT>, <&kp SEMICOLON>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+    };
 
 
 
-germanStyeComma: germanStyeComma {
-    compatible = "zmk,behavior-mod-morph";
-    #binding-cells = <0>;
-    bindings = <&kp DOT>, <&kp SEMICOLON>;
-    mods = <(MOD_LSFT|MOD_RSFT)>;
-};
 
-/ {
+
 
 
 
