@@ -39,93 +39,93 @@
               ╰────────╯ ╰────────╯            */
 
 //ZMK_COMBO(pwr,  &kp C_POWER, 0 4, ALL)
-combos {
-    compatible = "zmk,combos";
-    combo_pwr {
-        timeout-ms = <50>;
-        key-positions = <0 4>;
-        bindings = <&kp C_POWER>;
-        layers = <ALL>;
+    combos {
+        compatible = "zmk,combos";
+        combo_pwr {
+            timeout-ms = <50>;
+            key-positions = <0 4>;
+            bindings = <&kp C_POWER>;
+            layers = <-1>;
+        };
+            combo_quote {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <8 18>;
+            bindings = <&kp DE_DQT>;
+            layers = <BASE>;
+        };
+            combo_apostroph {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <0 10>;
+            bindings = <&kp DE_APOS>;
+            layers = <BASE>;
+        };
+            combo_apostroph {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <0 10>;
+            bindings = <&kp DE_APOS>;
+            layers = <BASE>;
+        };
+            combo_quoteus {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <8 18>;
+            bindings = <&kp DQT>;
+            layers = <BASEUS>;
+        };
+            combo_apostrophus {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <0 10>;
+            bindings = <&kp APOS>;
+            layers = <BASEUS>;
+        };
+            combo_five {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <3 13>;
+            bindings = <&kp N5>;
+            layers = <ALL>;
+        };
+            combo_six {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <6 16>;
+            bindings = <&kp N6>;
+            layers = <ALL>;
+        };
+            combo_up {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <11 12 13>;
+            bindings = <&kp UP>;
+            layers = <ALL 15>;
+        };
+            combo_down {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <11 13>;
+            bindings = <&kp DOWN>;
+            layers = <ALL 15>;
+        };
+            combo_right {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <12 13>;
+            bindings = <&kp RIGHT>;
+            layers = <ALL 15>;
+        };
+            combo_left {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <11 12>;
+            bindings = <&kp LEFT>;
+            layers = <ALL 15>;
+        };
+            combo_scCombo {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <12 22>;
+            bindings = <&scModMorph>;
+            layers = <BASE BASEUS>;
+        };
+            combo_ecommaCombo {
+            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            key-positions = <17 27>;
+            bindings = <&ecomma>;
+            layers = <BASE BASEUS>;
+        };
     };
-        combo_quote {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <8 18>;
-        bindings = <&kp DE_DQT>;
-        layers = <BASE>;
-    };
-        combo_apostroph {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <0 10>;
-        bindings = <&kp DE_APOS>;
-        layers = <BASE>;
-    };
-        combo_apostroph {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <0 10>;
-        bindings = <&kp DE_APOS>;
-        layers = <BASE>;
-    };
-        combo_quoteus {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <8 18>;
-        bindings = <&kp DQT>;
-        layers = <BASEUS>;
-    };
-        combo_apostrophus {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <0 10>;
-        bindings = <&kp APOS>;
-        layers = <BASEUS>;
-    };
-        combo_five {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <3 13>;
-        bindings = <&kp N5>;
-        layers = <ALL>;
-    };
-        combo_six {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <6 16>;
-        bindings = <&kp N6>;
-        layers = <ALL>;
-    };
-        combo_up {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <11 12 13>;
-        bindings = <&kp UP>;
-        layers = <ALL 15>;
-    };
-        combo_down {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <11 13>;
-        bindings = <&kp DOWN>;
-        layers = <ALL 15>;
-    };
-        combo_right {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <12 13>;
-        bindings = <&kp RIGHT>;
-        layers = <ALL 15>;
-    };
-        combo_left {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <11 12>;
-        bindings = <&kp LEFT>;
-        layers = <ALL 15>;
-    };
-        combo_scCombo {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <12 22>;
-        bindings = <&scModMorph>;
-        layers = <BASE BASEUS>;
-    };
-        combo_ecommaCombo {
-        timeout-ms = <50>;  // You may adjust this value based on your requirements
-        key-positions = <17 27>;
-        bindings = <&ecomma>;
-        layers = <BASE BASEUS>;
-    };
-};
 
 
 
@@ -244,7 +244,7 @@ macros {
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
-        
+
         //mod morph
         scModMorph: scModMorph{
             compatible = "zmk,behavior-mod-morph";
