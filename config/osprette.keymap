@@ -29,7 +29,7 @@
 
 //home row mods
 
-hm: home_row_mod {
+hm: hm {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "tap-preferred";
@@ -39,7 +39,7 @@ hm: home_row_mod {
     require-prior-idle-ms = <125>;
     bindings = <&kp>, <&kp>;
 };
-hmhold: home_row_mod_hold {
+hmhold: hmhold {
     compatible = "zmk,behavior-hold-tap";
     #binding-cells = <2>;
     flavor = "hold-preferred";
