@@ -269,6 +269,25 @@ macros {
             bindings = <&kp DOT>, <&kp SEMICOLON>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
+
+        number3: number3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hm F3 N3>, <&kp DE_SQT>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        number4: number4 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hm F4 N4>, <&hm DE_EURO DE_DOLLAR>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        number8: number8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&hm F8 N8>, <&kp DE_HASH>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
         number9: number9 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -333,11 +352,11 @@ macros {
     sym_layer {
       bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-            &kp DE_AT   &kp DE_A_UMLAUT &kp DE_HASH &hm DE_EURO DE_DOLLAR &kp DE_CARET     &bracket      &brace         &paren     &kp RA(MINUS)     ___
+            &kp DE_AT   &kp DE_A_UMLAUT &kp DE_O_UMLAUT &hm DE_EURO DE_DOLLAR &kp DE_CARET &bracket    &brace         &paren     &kp RA(MINUS)     ___
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-               &hm F1 N1    &hm F2 N2    &hm F3 N3      &hm F4 N4    &kp DE_AMPS       &lessgreater &hm F7 N7     &hm F8 N8       &number9     &hm F10 N0
+               &number1    &hm F2 N2    &number3        &number4         ___          &lessgreater   &hm F7 N7      &number8      &number9     &hm F10 N0
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp DE_SQT  &kp DE_PERCENT &kp DE_QMARK &hm DE_TILDE DE_PLUS  &kp DE_EXCL      &kp DE_ACUTE &hm DE_PIPE DE_MINUS ___           ___           ___
+        &kp DE_O_UMLAUT      ___            ___     &hm DE_TILDE DE_PLUS ___          &kp DE_ACUTE &hm DE_PIPE DE_MINUS ___           ___           ___
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
                                                            ___           ___               ___          ___
         //                                           ╰─────────────┴─────────────╯   ╰─────────────┴─────────────╯
