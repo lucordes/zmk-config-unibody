@@ -86,31 +86,7 @@
             key-positions = <0 4>;
             bindings = <&kp C_POWER>;
         };
-            combo_quote {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
-            key-positions = <8 18>;
-            bindings = <&kp DE_DQT>;
-            layers = <BASE>;
-        };
-            combo_apostroph {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
-            key-positions = <0 10>;
-            bindings = <&kp DE_APOS>;
-            layers = <BASE>;
-        };
 
-            combo_quoteus {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
-            key-positions = <8 18>;
-            bindings = <&kp DQT>;
-            layers = <BASEUS>;
-        };
-            combo_apostrophus {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
-            key-positions = <0 10>;
-            bindings = <&kp APOS>;
-            layers = <BASEUS>;
-        };
             combo_five {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <3 13>;
@@ -337,9 +313,9 @@ macros {
     nav_layer {
       bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-               &mo ADJ      &kp C_PREV     &kp PG_UP      &kp C_NEXT   &kp K_PLAY_PAUSE    ___           ___           ___           ___           ___
+               &mo ADJ      &kp C_PREV     &kp PG_UP      &kp C_NEXT   &kp K_PLAY_PAUSE    ___           ___           ___        &kp DE_DQT       ___
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 ___        &kp HOME      &kp PG_DN      &kp END      &kp C_MUTE       &kp C_BRI_UP &kp DE_A_UMLAUT &kp DE_U_UMLAUT ___ &kp DE_O_UMLAUT
+                 ___        &kp HOME      &kp PG_DN      &kp END      &kp C_MUTE       &kp C_BRI_UP &kp DE_A_UMLAUT &kp DE_U_UMLAUT &kp DE_SQT &kp DE_O_UMLAUT
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                  ___           ___         &kp DEL     &kp C_VOL_DN  &kp C_VOL_UP      &kp C_BRI_DN      ___           ___           ___           ___
         // ╰─────────────┴─────────────┴─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┴─────────────┴─────────────╯
