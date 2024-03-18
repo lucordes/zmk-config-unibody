@@ -98,22 +98,22 @@
             bindings = <&kp N6>;
         };
             combo_up {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
             key-positions = <11 12 13>;
             bindings = <&kp UP>;
         };
             combo_down {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
             key-positions = <11 13>;
             bindings = <&kp DOWN>;
         };
             combo_right {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
             key-positions = <12 13>;
             bindings = <&kp RIGHT>;
         };
             combo_left {
-            timeout-ms = <50>;  // You may adjust this value based on your requirements
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
             key-positions = <11 12>;
             bindings = <&kp LEFT>;
         };
