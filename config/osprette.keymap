@@ -84,7 +84,7 @@
         combo_pwr {
             timeout-ms = <50>;
             key-positions = <0 4>;
-            bindings = <&kp C_POWER>;
+            bindings = <&kp K_LOCK>;
         };
 
             combo_five {
