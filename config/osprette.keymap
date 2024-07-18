@@ -124,6 +124,26 @@
             key-positions = <11 12>;
             bindings = <&kp LEFT>;
         };
+        combo_uprhand {
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
+            key-positions = <16 17 18>;
+            bindings = <&kp UP>;
+        };
+            combo_downrhand {
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
+            key-positions = <16 18>;
+            bindings = <&kp DOWN>;
+        };
+            combo_rightrhand {
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
+            key-positions = <17 18>;
+            bindings = <&kp RIGHT>;
+        };
+            combo_leftrhand {
+            timeout-ms = <20>;  // You may adjust this value based on your requirements
+            key-positions = <16 17>;
+            bindings = <&kp LEFT>;
+        };
             combo_scCombo {
             timeout-ms = <50>;  // You may adjust this value based on your requirements
             key-positions = <12 22>;
